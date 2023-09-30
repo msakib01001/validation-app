@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <style>
+        h1{
+        text-align: center;
+        }
+        .valid{
+            color: rgb(128, 213, 0);
+        }
+        .invalid{
+            color: goldenrod;
+        }
+        .submit-err{
+            color: goldenrod;
+        }
+        .submit-succ{
+            color: rgb(128, 213, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Fill Up This Form</h2>
+        <hr>
+        <form action="" id="validForm" >
+            <div id="name">
+                <label>
+                    Full Name
+                </label>
+                <input type="text" class="u-full-width" placeholder="Enter Full Name" id="inputName" onkeyup="validateName()"> 
+            </div>
+            <div id="contact">
+                <label for="">
+                    Contact Number 
+                </label>
+                <input type="text" class="u-full-width" placeholder="11 digit ex: 019xxxxxxxx" id="inputContact" onkeyup="validateContact()">
+            </div>
+            <div id="postal">
+                <label for="">
+                    Postal Code
+                </label>
+                <input type="text" class="u-full-width" placeholder="4 Digit ex:1234" id="inputPostal" onkeyup="validatePostal()">
+            </div>
+            <div id="email">
+                <label for="">
+                    Email address 
+                </label>
+                <input type="text" class="u-full-width" placeholder="ex: xyz123@gmail.com" id="inputEmail" onkeyup="validateEmail()">
+            </div>
+            <div id="pass">
+                <label for="">
+                    Password
+                </label>
+                <input type="text" class="u-full-width" placeholder="contain one Capital letter, small letter, special chracter & number" id="inputPass" onkeyup="validatePass()">
+            </div>
+            <hr>
+            <input type="submit" value="Submit" onclick="submitForm">
+        </form>
+    </div>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
